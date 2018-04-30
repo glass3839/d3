@@ -1,0 +1,112 @@
+* {box-sizing: border-box;}
+
+body {
+    background-color: #333;
+    font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+h2 {
+    margin: 0;
+    color: #67c5ff;
+    text-shadow: 1px 1px 0px #00f;
+}
+
+p {
+    line-height: 1.5;
+    font-size: large;
+    color: #67c5ff;
+    text-shadow: 1px 1px 0px #00f;
+}
+
+.square_btn {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    text-shadow: 1px 1px 0px #00f;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.square_btn:hover {
+    background: #67c5ff;
+    color: white;
+}
+
+/* Flexbox Style */
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 100%;
+}
+
+@media (min-width: 700px){
+    .item {
+        flex: 0 0 calc( 50% - 1.25rem / 2);
+    }
+    .item:nth-child(odd) {
+        margin-left: 0;
+    }
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    height: 40vh;
+}
+
+svg {
+    width: 300%;
+    height: 50vh;
+}
+
+.tick text {
+    font-size: 12px;
+    stroke: #67c5ff;
+}
+.x .tick text{
+    font-size: 10px;
+    stroke: #67c5ff;
+	transform: rotate(-45deg) translate(-30px, -5px);
+}
+.line {
+	fill: none;
+    stroke: #67c5ff;
+    stroke-width: 2px;
+}
+
+.js_toolTip {
+    display: none;
+    width: 1em;
+    position: absolute;
+    /*background-color: #00f;*/
+    /*color: #67c5ff;*/
+    text-align: center;
+    font-size: xx-small;
+  }
+
+table { width: 100%; border-collapse: collapse;}
+th, td  { padding: 1px; border: 1px solid #ddd; }
+th  { background: #f4f4f4; }
+td { text-align: right}
